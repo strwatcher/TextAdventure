@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0506f8e691d7714afb68ade341fb2d40, type: 3}
   m_Name: OrbRoom
   m_EditorClassIdentifier: 
-  description: 
-  roomName: 
-  exits: []
+  description: You are in a vast, dark hall.
+  roomName: orb room
+  exits:
+  - keyString: south
+    exitDescription: There is a door to the south wtih the ligth coming through it
+    connectedRoom: {fileID: 11400000, guid: 2055141d206368c4abbc9e90a4d3186c, type: 2}

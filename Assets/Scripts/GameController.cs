@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
        DisplayLoggedText();
     }
 
-    private void DisplayLoggedText()
+    public void DisplayLoggedText()
     {
         string logAsText = string.Join("\n", _actionLog.ToArray());
 
@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour
         roomNavigation.UnpackExitsInRoom();
     }
 
-    private void LogStringWithReturn(string stringToAdd)
+    public void LogStringWithReturn(string stringToAdd)
     {
         _actionLog.Add(stringToAdd + "\n");
     }
