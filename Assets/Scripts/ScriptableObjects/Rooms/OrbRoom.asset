@@ -10,12 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0506f8e691d7714afb68ade341fb2d40, type: 3}
-  m_Name: StartingRoom
+  m_Name: OrbRoom
   m_EditorClassIdentifier: 
-  description: The dungeon door slams shut behind you. You are in a maze of twisty
-    little passages, all alike.
-  roomName: starting room
-  exits:
-  - keyString: 
-    exitDescription: 
-    connectedRoom: {fileID: 0}
+  description: 
+  roomName: 
+  exits: []

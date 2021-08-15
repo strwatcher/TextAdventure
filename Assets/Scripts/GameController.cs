@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 public class GameController : MonoBehaviour
@@ -8,11 +7,14 @@ public class GameController : MonoBehaviour
     public Text displayText;
     
     [HideInInspector] public RoomNavigation roomNavigation;
+    [HideInInspector] public List<string> roomInteractions;
     
-    private List<string> _actionLog = new List<string>();
+    private readonly List<string> _actionLog = new List<string>();
+        
     private void Awake()
     {
         roomNavigation = GetComponent<RoomNavigation>();
+        roomInteractions = new List<string>();
     }
 
     private void Start()
@@ -21,20 +23,29 @@ public class GameController : MonoBehaviour
        DisplayLoggedText();
     }
 
-    public void DisplayLoggedText()
+    private void DisplayLoggedText()
     {
         string logAsText = string.Join("\n", _actionLog.ToArray());
 
         displayText.text = logAsText;
     }
 
-    public void DisplayRoomText()
+    private void DisplayRoomText()
     {
-        string combinedText = roomNavigation.currentRoom.description + "\n";
+        UnpackRoom();
+        
+        string joinedInteractions = String.Join("\n", roomInteractions.ToArray());
+        string combinedText = roomNavigation.currentRoom.description + "\n" + joinedInteractions;
+        
         LogStringWithReturn(combinedText);
     }
 
-    public void LogStringWithReturn(string stringToAdd)
+    private void UnpackRoom()
+    {
+        roomNavigation.UnpackExitsInRoom();
+    }
+
+    private void LogStringWithReturn(string stringToAdd)
     {
         _actionLog.Add(stringToAdd + "\n");
     }
