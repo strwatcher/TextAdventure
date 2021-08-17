@@ -4,4 +4,5 @@ public enum ActionType
     Examine,
     Take,
     Inventory,
+    Use,
 }

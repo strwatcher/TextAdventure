@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0506f8e691d7714afb68ade341fb2d40, type: 3}
-  m_Name: OrbRoom
+  m_Name: OrbRoom Open
   m_EditorClassIdentifier: 
-  description: You are in a vast, dark hall.
+  description: Suddenly there is a shower of dust. The door back to the entrance
+    slams shut behind you
   roomName: orb room
   exits:
-  - keyString: south
-    exitDescription: There is a door to the south wtih the ligth coming through it
-    connectedRoom: {fileID: 11400000, guid: 2055141d206368c4abbc9e90a4d3186c, type: 2}
+  - keyString: west
+    exitDescription: A secret door opens to the west
+    connectedRoom: {fileID: 11400000, guid: 21445592ade27832481782c4a151c91f, type: 2}
   InteractableObjects: []
