@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Environment;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,23 +11,33 @@ namespace Console
         
         private Text _cout;
 
-        private List<string> _log = new List<string>();
+        private readonly List<string> _log = new List<string>();
 
         private void Awake()
         {
             _cout = GetComponent<Text>();
         }
 
-        private void LogOutput(string text)
+        public void LogOutput(string text)
         {
-            _log.Add(text + endl);
+            _log.Add(endl + text);
         }
 
-        public void Display(string text)
+        public void LogRoom(CurrentRoom room)
         {
-            LogOutput(text);
+            string roomDescription = endl + room.room.GetDescription + endl;
+
+            foreach (string interaction in room.interactions)
+            {
+                roomDescription += endl + interaction;
+            }
             
-            string combinedText = "";
+            _log.Add(roomDescription + endl);
+        }
+
+        public void DisplayLog()
+        {
+            string combinedText = " ";
             
             foreach (var line in _log)
             {
