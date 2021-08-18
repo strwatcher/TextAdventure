@@ -21,6 +21,7 @@ namespace Console
             userInput = userInput.ToLower();
             char[] separators = { ' ' };
             string[] separatedCommand = userInput.Split(separators);
+            cout.LogOutput(userInput);
             player.SetAction(separatedCommand);
             ResetInputField();
         }

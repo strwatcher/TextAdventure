@@ -8,6 +8,7 @@ namespace Console
     public class Output : MonoBehaviour
     {
         private const string endl = "\n";
+        private const string actionSign = ">\t";
         
         private Text _cout;
 
@@ -25,11 +26,11 @@ namespace Console
 
         public void LogRoom(CurrentRoom room)
         {
-            string roomDescription = endl + room.room.GetDescription + endl;
+            string roomDescription = endl + room.room.GetDescription;
 
             foreach (string interaction in room.interactions)
             {
-                roomDescription += endl + interaction;
+                roomDescription += endl + actionSign + interaction;
             }
             
             _log.Add(roomDescription + endl);
