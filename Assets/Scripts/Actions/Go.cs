@@ -7,23 +7,24 @@ namespace Actions
     [CreateAssetMenu(menuName = "TextAdventure/Actions/Go")]
     public class Go : InputAction
     {
-        private void TryChangeRoom(CurrentRoom room, Output cout, string direction)
+        // Move literals to constants
+        private void TryChangeRoom(RoomPackager roomPackager, Output cout, string direction)
         {
-            if (room.UnpackedExits.ContainsKey(direction))
+            if (roomPackager.UnpackedExits.ContainsKey(direction))
             {
-                room.SwitchRoom(room.UnpackedExits[direction]);
-                cout.LogOutput($"Вы отправились на {direction}\n");
-                cout.LogRoom(room);
+                roomPackager.SwitchRoom(roomPackager.UnpackedExits[direction]);
+                cout.LogOutput(messages.GenerateMessage(messages.successTemplate, direction));
+                cout.LogRoom(roomPackager);
             }
             else
             {
-                cout.LogOutput($"Нет пути на {direction}\n");
+                cout.LogOutput(messages.GenerateMessage(messages.failTemplate, direction));
             }
         }
         
-        public override void RespondToInput(CurrentRoom room, Output cout, string[] command)
+        public override void RespondToInput(RoomPackager env, Output cout, string[] command)
         {
-            TryChangeRoom(room, cout, command[1]);
+            TryChangeRoom(env, cout, command[1]);
         }
     }
 }

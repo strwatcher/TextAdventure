@@ -7,8 +7,8 @@ namespace Console
 {
     public class Output : MonoBehaviour
     {
-        private const string endl = "\n";
-        private const string actionSign = ">\t";
+        private const string Endl = "\n";
+        private const string ActionSign = ">\t";
         
         private Text _cout;
 
@@ -21,19 +21,19 @@ namespace Console
 
         public void LogOutput(string text)
         {
-            _log.Add(endl + text);
+            _log.Add(Endl + text);
         }
 
-        public void LogRoom(CurrentRoom room)
+        public void LogRoom(RoomPackager env)
         {
-            string roomDescription = endl + room.room.GetDescription;
+            string roomDescription = Endl + env.savedEnvironment.room.GetDescription;
 
-            foreach (string interaction in room.interactions)
+            foreach (string interaction in env.interactions)
             {
-                roomDescription += endl + actionSign + interaction;
+                roomDescription += Endl + ActionSign + interaction;
             }
             
-            _log.Add(roomDescription + endl);
+            _log.Add(roomDescription + Endl);
         }
 
         public void DisplayLog()
@@ -42,7 +42,7 @@ namespace Console
             
             foreach (var line in _log)
             {
-                combinedText += line + endl;
+                combinedText += line + Endl;
             }
 
             _cout.text = combinedText;

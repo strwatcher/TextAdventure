@@ -723,9 +723,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b7aa959a4484e459004bee9b184a9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: {fileID: 1887806496}
+  roomPackager: {fileID: 1887806496}
   availableActions:
   - {fileID: 11400000, guid: 5f3111b55888ff46bb8c870f9ff5dfb2, type: 2}
+  - {fileID: 11400000, guid: 37e27141f43e3b83ea5c987ab404e2d1, type: 2}
+  - {fileID: 11400000, guid: 8daf5640230228f9cbbd9f9258beb52f, type: 2}
   cout: {fileID: 2106181577}
 --- !u!4 &1810148508
 Transform:
@@ -753,7 +755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 195980c0397c4035b9e5683f9fe7c809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startRoom: {fileID: 1887806496}
+  startRoomPackager: {fileID: 1887806496}
   cout: {fileID: 2106181577}
 --- !u!1 &1887806495
 GameObject:
@@ -784,8 +786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af887bdf43cc404a6901fe41583d18b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: {fileID: 11400000, guid: a2940298a781e7a7e9776bb7006a8df0, type: 2}
   interactions: []
+  savedEnvironment: {fileID: 11400000, guid: 6ff13b05990d4d86c874c53386b203d4, type: 2}
 --- !u!4 &1887806497
 Transform:
   m_ObjectHideFlags: 0

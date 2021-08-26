@@ -5,12 +5,12 @@ namespace Player
 {
     public class Initialisation: MonoBehaviour
     {
-        [SerializeField] private CurrentRoom startRoom;
+        [SerializeField] private RoomPackager startRoomPackager;
         [SerializeField] private Console.Output cout;
         
         private void Start()
         {
-            cout.LogRoom(startRoom);
+            cout.LogRoom(startRoomPackager);
             cout.DisplayLog();
         }
     }

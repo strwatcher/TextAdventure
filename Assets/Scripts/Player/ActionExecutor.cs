@@ -1,4 +1,3 @@
-using System;
 using Actions;
 using Environment;
 using UnityEngine;
@@ -9,7 +8,7 @@ namespace Player
     public delegate void ActionAssigned();
     public class ActionExecutor : MonoBehaviour
     {
-        [SerializeField] private CurrentRoom room;
+        [SerializeField] private RoomPackager roomPackager;
         [SerializeField] private InputAction[] availableActions;
         [SerializeField] private Console.Output cout;
         private string[] _command;
@@ -27,7 +26,7 @@ namespace Player
             {
                 if (action.GetKey.Equals(_command[0]))
                 {
-                    action.RespondToInput(room, cout, _command);
+                    action.RespondToInput(roomPackager, cout, _command);
                 }
             }
             cout.DisplayLog();

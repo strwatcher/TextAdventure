@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Go
   m_EditorClassIdentifier: 
   key: "\u043D\u0430"
+  messages: {fileID: 11400000, guid: cadae2f847942f161831c2d5ab6024a4, type: 2}
