@@ -17,6 +17,7 @@ namespace Actions
                 {
                     item.state = ItemState.InInventory;
                     cout.LogOutput(messages.GenerateMessage(messages.successTemplate, command[1]));
+                    TryToTakeActionResponse(item, env, cout);
                     return;
                 }
             }

@@ -22,6 +22,7 @@ namespace Actions
                         {
                             cout.LogOutput(messages.GenerateMessage(messages.successTemplate, command[1]));
                             cout.LogOutput(interaction.GetResponseDescription);
+                            TryToTakeActionResponse(item, env, cout);
                             return;
                         }
                     }

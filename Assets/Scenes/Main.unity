@@ -728,6 +728,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f3111b55888ff46bb8c870f9ff5dfb2, type: 2}
   - {fileID: 11400000, guid: 37e27141f43e3b83ea5c987ab404e2d1, type: 2}
   - {fileID: 11400000, guid: 8daf5640230228f9cbbd9f9258beb52f, type: 2}
+  - {fileID: 11400000, guid: b3aa45343a80235a9a52adde2597b5c2, type: 2}
+  - {fileID: 11400000, guid: 253ed81607177131baf650f9b3ffb60a, type: 2}
   cout: {fileID: 2106181577}
 --- !u!4 &1810148508
 Transform:

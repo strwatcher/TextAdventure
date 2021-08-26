@@ -8,8 +8,8 @@ namespace Console
     public class Output : MonoBehaviour
     {
         private const string Endl = "\n";
-        private const string ActionSign = ">\t";
-        
+        private const string PointSign = ">\t";
+
         private Text _cout;
 
         private readonly List<string> _log = new List<string>();
@@ -18,6 +18,8 @@ namespace Console
         {
             _cout = GetComponent<Text>();
         }
+
+        public string pointSign => PointSign;
 
         public void LogOutput(string text)
         {
@@ -30,7 +32,7 @@ namespace Console
 
             foreach (string interaction in env.interactions)
             {
-                roomDescription += Endl + ActionSign + interaction;
+                roomDescription += Endl + PointSign + interaction;
             }
             
             _log.Add(roomDescription + Endl);

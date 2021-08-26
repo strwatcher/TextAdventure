@@ -1,4 +1,5 @@
 using Environment;
+using Items;
 using UnityEngine;
 
 namespace Actions
@@ -7,9 +8,19 @@ namespace Actions
     {
         [SerializeField] private string key;
         public Messages messages;
-        private string TryToGetActionResponse()
+
+        public void TryToTakeActionResponse(Item item, RoomPackager env, Console.Output cout)
         {
-            return "";
+            foreach (Interaction interaction in item.GetInteractions)
+            {
+                if (interaction.GetAction.GetKey.Equals(key))
+                {
+                    if (interaction.GetActionResponse)
+                    {
+                        interaction.GetActionResponse.GetActionResponse(env, cout);
+                    }
+                }
+            }
         }
         
         public string GetKey => key;

@@ -8,6 +8,6 @@ public class Messages: ScriptableObject
 
     public string GenerateMessage(string template, string noun)
     {
-        return $"{template} {noun}\n";
+        return $"{template} {noun}";
     }
 }
