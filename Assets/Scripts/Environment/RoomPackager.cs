@@ -41,8 +41,9 @@ namespace Environment
         {
             foreach (Item item in savedEnvironment.items)
             {
-                if (item.GetSpawnRoomKey.Equals(savedEnvironment.room.GetKey) && !item.state.Equals(ItemState.InInventory))
-                {
+                if (!item.state.Equals(ItemState.InInventory) && 
+                    item.GetSpawnRoomKey.Equals(savedEnvironment.room.GetKey))
+                { 
                     interactions.Add(item.GetDescription);
                 }
             }

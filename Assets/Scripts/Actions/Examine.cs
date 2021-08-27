@@ -13,8 +13,8 @@ namespace Actions
             if (env.UnpackedItems.ContainsKey(command[1]))
             {
                 Item item = env.UnpackedItems[command[1]];
-                if (item.GetSpawnRoomKey.Equals(env.savedEnvironment.room.GetKey) ||
-                    item.state.Equals(ItemState.InInventory))
+                if (item.state.Equals(ItemState.InInventory) ||
+                    item.GetSpawnRoomKey.Equals(env.savedEnvironment.room.GetKey))
                 {
                     foreach (Interaction interaction in item.GetInteractions)
                     {

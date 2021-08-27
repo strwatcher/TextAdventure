@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4342da0348f4a5cbe2c324c0d5450d7, type: 3}
-  m_Name: Restart
+  m_Script: {fileID: 11500000, guid: 39397d78d58549cba5b16b2d7eefbd95, type: 3}
+  m_Name: BreakTheFloor
   m_EditorClassIdentifier: 
-  key: "\u0440\u0435\u0441\u0442\u0430\u0440\u0442"
-  messages: {fileID: 0}
-  defaultEnv: {fileID: 11400000, guid: fb3cd2e1ced92e1b4b43d15c2fb5ff7d, type: 2}
-  defaultStates: 0000000001000000
+  factor: loud room
+  messages: {fileID: 11400000, guid: ed018cd9802391d1496b679588a438c0, type: 2}
+  newRoom: {fileID: 11400000, guid: b5ebca4f908c3612fb22d127e8dbc0eb, type: 2}

@@ -9,7 +9,7 @@ namespace Actions
         [SerializeField] private string key;
         public Messages messages;
 
-        public void TryToTakeActionResponse(Item item, RoomPackager env, Console.Output cout)
+        public bool TryToTakeActionResponse(Item item, RoomPackager env, Console.Output cout)
         {
             foreach (Interaction interaction in item.GetInteractions)
             {
@@ -17,10 +17,11 @@ namespace Actions
                 {
                     if (interaction.GetActionResponse)
                     {
-                        interaction.GetActionResponse.GetActionResponse(env, cout);
+                        return interaction.GetActionResponse.GetActionResponse(env, cout);
                     }
                 }
             }
+            return false;
         }
         
         public string GetKey => key;

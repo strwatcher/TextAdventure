@@ -9,13 +9,14 @@ namespace Actions
     public class Restart : InputAction
     {
         [SerializeField] private SavedEnvironment defaultEnv;
+        [SerializeField] private ItemState[] defaultStates;
         public override void RespondToInput(RoomPackager env, Output cout, string[] command)
         {
-            env.savedEnvironment = Instantiate(defaultEnv);
-            //Так блин делать нельзя, надо как-то переработать систему айтемов, чтобы обновление состояние айтема не меняло сам so
-            foreach (var item in defaultEnv.items)
+            env.savedEnvironment.items = defaultEnv.items;
+            env.savedEnvironment.room = defaultEnv.room;
+            for (int i = 0; i < defaultEnv.items.Length; ++i)
             {
-                item.state = ItemState.Default;
+                defaultEnv.items[i].state = defaultStates[i];
             }
             env.SwitchRoom(defaultEnv.room);
             cout.LogRoom(env);

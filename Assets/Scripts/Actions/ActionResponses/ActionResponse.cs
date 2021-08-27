@@ -10,6 +10,6 @@ namespace Actions.ActionResponses
         
         public Messages messages;
         public string GetFactor => factor;
-        public abstract void GetActionResponse(RoomPackager env, Output cout);
+        public abstract bool GetActionResponse(RoomPackager env, Output cout);
     }
 }

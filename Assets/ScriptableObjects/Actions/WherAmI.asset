@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4342da0348f4a5cbe2c324c0d5450d7, type: 3}
-  m_Name: Restart
+  m_Script: {fileID: 11500000, guid: 4de1990c1ba84da4b4d0044989c9df59, type: 3}
+  m_Name: WherAmI
   m_EditorClassIdentifier: 
-  key: "\u0440\u0435\u0441\u0442\u0430\u0440\u0442"
+  key: "\u0433\u0434\u0435"
   messages: {fileID: 0}
-  defaultEnv: {fileID: 11400000, guid: fb3cd2e1ced92e1b4b43d15c2fb5ff7d, type: 2}
-  defaultStates: 0000000001000000

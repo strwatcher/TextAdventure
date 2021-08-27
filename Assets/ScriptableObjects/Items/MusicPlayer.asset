@@ -23,6 +23,9 @@ MonoBehaviour:
   - action: {fileID: 11400000, guid: 8daf5640230228f9cbbd9f9258beb52f, type: 2}
     responseDescription: 
     actionResponse: {fileID: 11400000, guid: 052d83ffc0575ca84b39ae81ece78658, type: 2}
+  - action: {fileID: 11400000, guid: 5c739755c55c66b54ab37eecde204d94, type: 2}
+    responseDescription: 
+    actionResponse: {fileID: 11400000, guid: 3bae5f9eca03025ee84a5d948d379702, type: 2}
   spawnRoom: {fileID: 11400000, guid: 4d6908414878f552188334c938d9c4d2, type: 2}
   description: "\u0412 \u0446\u0435\u043D\u0442\u0440\u0435 \u043A\u043E\u043C\u043D\u0430\u0442\u044B
     \u043D\u0430 \u043F\u044C\u0435\u0434\u0435\u0441\u0442\u0430\u043B\u0435 \u043B\u0435\u0436\u0438\u0442
